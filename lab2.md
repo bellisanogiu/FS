@@ -10,49 +10,36 @@ Eseguite i seguenti passi su bash:
 5. /etc/init.d/mysql start
 6. mysql -u root
 
-
-Incollare la query:
-
+7. Incollare la query:
+```
 CREATE DATABASE dvwa;
 GRANT ALL PRIVILEGES ON dvwa.* TO 'user'@'localhost' IDENTIFIED BY 'password';
+```
+8. Chiudere mysql con CTRL+D
 
-
-Chiudere mysql con CTRL+D
-
-
-
-Eseguire:
-
-cd /var/www/dvwa/config
+9. Eseguire: 
+```cd /var/www/dvwa/config
 
 mv config.inc.php.dist config.inc.php
 
-nano config.inc.php
+nano config.inc.php```
 
+10. Sostituire la riga `$_DVWA[ 'db_user' ]     = 'root';` con `$_DVWA[ 'db_user' ]     = 'user';`
 
+11. Sostituire la riga `$_DVWA[ 'db_password' ] = 'p@ssw0rd';` con `$_DVWA[ 'db_password' ] = 'password';`
 
-Sostituire la riga $_DVWA[ 'db_user' ]     = 'root'; con $_DVWA[ 'db_user' ]     = 'user';
+12. Sostituire la riga `$_DVWA[ 'db_port '] = '5432';` con `#$_DVWA[ 'db_port '] = '5432';`
 
-Sostituire la riga $_DVWA[ 'db_password' ] = 'p@ssw0rd'; con $_DVWA[ 'db_password' ] = 'password';
+13. Eseguire: `nano /etc/apache2/sites-enabled/000-default.conf`
 
+14. Sostituire la riga `DocumentRoot /var/www'/html` con `DocumentRoot /var/www`
 
-Sostituire la riga $_DVWA[ 'db_port '] = '5432'; con #$_DVWA[ 'db_port '] = '5432';
+15. Eseguire: `/etc/init.d/apache2 restart`
 
-Eseguire:
-nano /etc/apache2/sites-enabled/000-default.conf
+16. Connettersi al sito admin
 
-Sostituire la riga DocumentRoot /var/www'/html con DocumentRoot /var/www
+17. Cliccare il bottone *Create Reset/Database*
 
-Eseguire:
+18. Credenziali web application: *User "admin"* - *Password "password"*
 
-/etc/init.d/apache2 restart
-
-
-
-Connettersi al sito admin
-
-Cliccare il bottone Create Reset/Database
-
-Credenziali web application: User "admin" - Password "password"
-
-Entrare su DVWA Security e impostare come livello di sicurezza "low".
+19. Entrare su DVWA Security e impostare come *livello di sicurezza* "low".
