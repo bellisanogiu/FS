@@ -18,11 +18,13 @@ GRANT ALL PRIVILEGES ON dvwa.* TO 'user'@'localhost' IDENTIFIED BY 'password';
 8. Chiudere mysql con CTRL+D
 
 9. Eseguire: 
-```cd /var/www/dvwa/config
+```
+cd /var/www/dvwa/config
 
 mv config.inc.php.dist config.inc.php
 
-nano config.inc.php```
+nano config.inc.php
+```
 
 10. Sostituire la riga `$_DVWA[ 'db_user' ]     = 'root';` con `$_DVWA[ 'db_user' ]     = 'user';`
 
