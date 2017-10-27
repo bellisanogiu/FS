@@ -1,13 +1,14 @@
-# laboraorio 2
+# laboratorio 2
 # istruzioni per Kali: installazione di Damn Vulnerable Web Application (DVWA)
 
 Eseguite i seguenti passi su bash: 
-wget https://github.com/ethicalhack3r/DVWA/archive/master.zip 
-unzip master.zip 
-mv DVWA-master /var/www/dvwa
-/etc/init.d/apache2 start
-/etc/init.d/mysql start
-mysql -u root
+
+1. wget https://github.com/ethicalhack3r/DVWA/archive/master.zip 
+2. unzip master.zip 
+3. mv DVWA-master /var/www/dvwa
+4. /etc/init.d/apache2 start
+5. /etc/init.d/mysql start
+6. mysql -u root
 
 
 Incollare la query:
