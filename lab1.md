@@ -1,3 +1,4 @@
+
 ##Buffer overflow
 inserire in un file chiamato *pwdcheck.c* il seguente codice:
 ```
@@ -31,3 +32,4 @@ else
   printf("ACCESS DENIED!\n");
 }
 ```
+Compilare il codice senza abilitare la protezione dello stack con `gcc pwdcheck.c -o pwdcheck -fno-stack-protector`
